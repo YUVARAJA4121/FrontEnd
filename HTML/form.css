@@ -1,0 +1,16 @@
+body{
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: aqua;
+
+}
+.form-box{
+    background: whitesmoke;
+    padding: 30px;
+    border:1px solid black
+    border: radius 5px;
+    width:250px;
+}    
