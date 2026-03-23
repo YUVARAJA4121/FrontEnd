@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dashboard - FuelTrack</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar navbar-dark px-4 py-2 d-flex justify-content-between">
+  <span class="navbar-brand fw-bold">⛽ FuelTrack</span>
+  <div class="d-flex align-items-center gap-3">
+    <span class="text-white" style="font-size:0.9rem;">👤 Hello, User</span>
+    <a href="login.html" class="btn btn-outline-light btn-sm">🚪 Logout</a>
+  </div>
+</nav>
+
+<!-- MAIN CONTENT -->
+<div class="container py-4">
+
+  <!-- Welcome message -->
+  <div class="p-4 mb-4 text-white rounded" style="background:linear-gradient(135deg,#1a237e,#1565c0);">
+    <h4 class="fw-bold mb-1">👋 Welcome back, User!</h4>
+    <p class="mb-3" style="opacity:0.85;">Here is your fuel status for today.</p>
+    <a href="#bunks" class="btn btn-warning text-dark fw-bold">📍 Find Nearby Petrol Bunks</a>
+  </div>
+
+  <!-- 4 STAT CARDS -->
+  <div class="row g-3 mb-4">
+    <div class="col-6 col-md-3">
+      <div class="card p-3 text-center">
+        <div style="font-size:1.8rem;">⛽</div>
+        <div class="fw-bold fs-5" style="color:#1a237e;">72%</div>
+        <small class="text-muted">Fuel Level</small>
+      </div>
+    </div>
+    <div class="col-6 col-md-3">
+      <div class="card p-3 text-center">
+        <div style="font-size:1.8rem;">🛣️</div>
+        <div class="fw-bold fs-5" style="color:#1a237e;">420 km</div>
+        <small class="text-muted">Est. Range</small>
+      </div>
+    </div>
+    <div class="col-6 col-md-3">
+      <div class="card p-3 text-center">
+        <div style="font-size:1.8rem;">📍</div>
+        <div class="fw-bold fs-5" style="color:#1a237e;">2.1 km</div>
+        <small class="text-muted">Nearest Bunk</small>
+      </div>
+    </div>
+    <div class="col-6 col-md-3">
+      <div class="card p-3 text-center">
+        <div style="font-size:1.8rem;">💧</div>
+        <div class="fw-bold fs-5" style="color:#1a237e;">36 L</div>
+        <small class="text-muted">Remaining</small>
+      </div>
+    </div>
+  </div>
+
+  <!-- FUEL TRACKER CARD -->
+  <div class="card p-4 mb-4">
+    <h5 class="fw-bold mb-3" style="color:#1a237e;">⛽ Fuel Tracker</h5>
+    <label class="form-label">Enter Fuel Level (Litres)</label>
+    <input type="number" class="form-control mb-3" value="36" min="0" max="50" />
+    <div class="d-flex justify-content-between mb-1">
+      <small>Fuel Level</small>
+      <small class="fw-bold" style="color:#1a237e;">72%</small>
+    </div>
+    <div class="progress mb-3">
+      <div class="progress-bar" style="width:72%; background:#1a237e;"></div>
+    </div>
+    <div class="alert-ok">✅ Fuel level is sufficient — no action needed.</div>
+    <div class="alert-warn">⚠️ You may need fuel soon for long trips.</div>
+    <button class="btn mt-3 text-white" style="background:#1a237e;">🔄 Update Fuel Level</button>
+  </div>
+
+  <!-- NEARBY PETROL BUNKS -->
+  <h5 class="fw-bold mb-3" style="color:#1a237e;" id="bunks">📍 Nearby Petrol Bunks</h5>
+  <div class="row g-3 mb-4">
+
+    <div class="col-md-4">
+      <div class="card p-3">
+        <div class="fw-bold">🛢️ IndianOil — Anna Nagar</div>
+        <small class="text-muted">Anna Nagar, Chennai</small>
+        <div class="mt-2 d-flex gap-2 flex-wrap">
+          <span class="badge bg-primary">📏 2.1 km</span>
+          <span class="badge bg-secondary">⏱️ 5 mins</span>
+          <span class="badge bg-success">● Open</span>
+        </div>
+        <a href="#map" class="btn btn-sm mt-2 text-white" style="background:#1a237e;">🧭 Directions</a>
+      </div>
+    </div>
+
+    <div class="col-md-4">
+      <div class="card p-3">
+        <div class="fw-bold">⛽ HP — T. Nagar</div>
+        <small class="text-muted">T. Nagar, Chennai</small>
+        <div class="mt-2 d-flex gap-2 flex-wrap">
+          <span class="badge bg-primary">📏 3.4 km</span>
+          <span class="badge bg-secondary">⏱️ 9 mins</span>
+          <span class="badge bg-success">● Open</span>
+        </div>
+        <a href="#map" class="btn btn-sm mt-2 text-white" style="background:#1a237e;">🧭 Directions</a>
+      </div>
+    </div>
+
+    <div class="col-md-4">
+      <div class="card p-3">
+        <div class="fw-bold">🔵 BPCL — Vadapalani</div>
+        <small class="text-muted">Vadapalani, Chennai</small>
+        <div class="mt-2 d-flex gap-2 flex-wrap">
+          <span class="badge bg-primary">📏 5.0 km</span>
+          <span class="badge bg-secondary">⏱️ 13 mins</span>
+          <span class="badge bg-warning text-dark">24 Hrs</span>
+        </div>
+        <a href="#map" class="btn btn-sm mt-2 text-white" style="background:#1a237e;">🧭 Directions</a>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- MAP -->
+  <div class="card overflow-hidden" id="map">
+    <div class="p-3 border-bottom fw-bold" style="color:#1a237e;">🗺️ Map View</div>
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d31108.549!2d80.2376!3d13.0582!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sin!4v1700000000000"
+      width="100%" height="300" style="border:0;" allowfullscreen loading="lazy">
+    </iframe>
+  </div>
+
+</div>
+
+<!-- FOOTER -->
+<footer>© 2025 FuelTrack — Made with ❤️ in Chennai</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
