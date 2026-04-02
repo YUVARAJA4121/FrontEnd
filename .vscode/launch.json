@@ -1,0 +1,31 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Launch JavaScript File",
+      "type": "node",
+      "request": "launch",
+      "program": "${workspaceFolder}/javascript/${fileBasename}",
+      "restart": true,
+      "console": "integratedTerminal",
+      "skipFiles": ["<node_internals>/**"]
+    },
+    {
+      "name": "Launch helo.js",
+      "type": "node",
+      "request": "launch",
+      "program": "${workspaceFolder}/javascript/helo.js",
+      "restart": true,
+      "console": "integratedTerminal"
+    },
+    {
+      "name": "Debug Current File",
+      "type": "node",
+      "request": "launch",
+      "program": "${file}",
+      "restart": true,
+      "console": "integratedTerminal",
+      "skipFiles": ["<node_internals>/**"]
+    }
+  ]
+}
