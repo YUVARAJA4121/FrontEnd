@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Event Tasks</title>
+</head>
+<body>
+
+    <!-- ✅ Task 1: Live Name Preview -->
+    <h3>Task 1: Live Name Preview</h3>
+    <input type="text" id="nameInput" placeholder="Enter name">
+    <p id="previewText"></p>
+
+    <!-- ✅ Task 2: Button Click Counter -->
+    <h3>Task 2: Counter</h3>
+    <button id="countBtn">Click Me</button>
+    <p id="countText">0</p>
+
+    <!-- ✅ Task 3: Show/Hide Password -->
+    <h3>Task 3: Show/Hide Password</h3>
+    <input type="password" id="password">
+    <button id="toggleBtn">Show</button>
+
+    <!-- ✅ Task 4: Form Submit -->
+    <h3>Task 4: Form Submit</h3>
+    <form id="myForm">
+        <input type="text" id="formName" placeholder="Enter name">
+        <button type="submit">Submit</button>
+    </form>
+    <p id="formOutput"></p>
+
+    <!-- ✅ Task 5: Background Color Changer -->
+    <h3>Task 5: Background Color</h3>
+    <button id="redBtn">Red</button>
+    <button id="greenBtn">Green</button>
+    <button id="blueBtn">Blue</button>
+
+    <script>
+        // 🔹 Task 1: Live Name Preview
+        var nameInput = document.getElementById("nameInput");
+        var previewText = document.getElementById("previewText");
+
+        nameInput.addEventListener("input", function() {
+            previewText.innerText = nameInput.value;
+        });
+
+
+        // 🔹 Task 2: Button Click Counter
+        var count = 0;
+        var countBtn = document.getElementById("countBtn");
+        var countText = document.getElementById("countText");
+
+        countBtn.addEventListener("click", function() {
+            count = count + 1;
+            countText.innerText = count;
+        });
+
+
+        // 🔹 Task 3: Show/Hide Password
+        var password = document.getElementById("password");
+        var toggleBtn = document.getElementById("toggleBtn");
+
+        toggleBtn.addEventListener("click", function() {
+            if (password.type === "password") {
+                password.type = "text";
+                toggleBtn.innerText = "Hide";
+            } else {
+                password.type = "password";
+                toggleBtn.innerText = "Show";
+            }
+        });
+
+
+        // 🔹 Task 4: Form Submit
+        var form = document.getElementById("myForm");
+        var formName = document.getElementById("formName");
+        var formOutput = document.getElementById("formOutput");
+
+        form.addEventListener("submit", function(event) {
+            event.preventDefault(); // stop page reload
+            formOutput.innerText = "Entered Name: " + formName.value;
+        });
+
+
+        // 🔹 Task 5: Background Color Changer
+        var redBtn = document.getElementById("redBtn");
+        var greenBtn = document.getElementById("greenBtn");
+        var blueBtn = document.getElementById("blueBtn");
+
+        redBtn.addEventListener("click", function() {
+            document.body.style.backgroundColor = "red";
+        });
+
+        greenBtn.addEventListener("click", function() {
+            document.body.style.backgroundColor = "green";
+        });
+
+        blueBtn.addEventListener("click", function() {
+            document.body.style.backgroundColor = "blue";
+        });
+
+    </script>
+
+</body>
+</html>
